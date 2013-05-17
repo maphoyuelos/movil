@@ -3,16 +3,27 @@
 <head>
 <meta charset="utf-8">
 <title>IBERISA</title>
+<meta name=”viewport” width=device-width, initial-scale=1>
 <link href="jquery-mobile/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
 <script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
 <script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+   $("a.external").click(function() {
+      url = $(this).attr("href");
+      window.open(url, '_blank');
+      return false;
+   });
+});
+</script>
 </head> 
 <body>
 <!-- IBERISA -->
 <div data-role="page" id="IBERISA">
 	<div data-role="header" data-theme="b">
 		<h1>IBERISA</h1>
-        <a data-icon="delete" onClick="navigator.app.exitApp();">Cerrar</a>
+        <!-- <a data-icon="delete" onClick="navigator.app.exitApp();">Cerrar</a> -->
 	</div>
 	<div data-role="content">	
 		<ul data-role="listview">
@@ -2388,7 +2399,7 @@
 		<div data-role="navbar">
 		<ul>
 			<li><a href="#ALINEADORES" class="ui-btn-active">ALINEADORES</a></li>
-            <li><a href="http://www.iberisasl.com/downloadPDF.php?filePath=archivos/hofmann/alineadoras/&amp;fileName=Megaline_SSENCE.pdf" target="_blank" rel="external">CATALOGO</a></li>
+            <li><a href="http://www.iberisasl.com/downloadPDF.php?filePath=archivos/hofmann/alineadoras/&amp;fileName=Megaline_SSENCE.pdf" class="external">CATALOGO</a></li>
             </ul></div>
             
 	</div>
